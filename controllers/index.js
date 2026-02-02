@@ -1,15 +1,15 @@
-exports.showIndex = (req, res, next) => {
+exports.showIndex = (_req, res, _next) => {
   res.render('index')
 }
 
-exports.showPageSignUp = (req, res, next) => {
+exports.showPageSignUp = (_req, res, _next) => {
   res.render('signUp')
 }
 
-exports.showMembersPage = (req, res) => {
+exports.showMembersPage = (_req, res) => {
   res.render('members')
 }
 
-exports.get404Page = (req, res, next) => {
+exports.get404Page = (_req, res, _next) => {
   res.status(404).render('404')
 }

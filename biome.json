@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["./controllers/**", "./routes/**", "./util/**", "./app.js"]
+    "includes": [
+      "./controllers/**",
+      "./routes/**",
+      "./util/**",
+      "./models/**",
+      "./app.js"
+    ]
   },
   "formatter": {
     "enabled": true,
