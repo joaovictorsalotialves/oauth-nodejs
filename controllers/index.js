@@ -37,6 +37,7 @@ exports.login = async (req, res, _next) => {
 
   try {
     if (user) {
+      req.session.user = user
       return res.redirect('/members')
     }
 
@@ -48,10 +49,18 @@ exports.login = async (req, res, _next) => {
 }
 
 exports.checkAuth = (req, res, next) => {
-  const auth = false
-  if (auth) {
+  if (req.session && req.session.user) {
     next()
   } else {
     res.redirect('/')
   }
+}
+
+exports.logout = (req, res, _next) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.log(err)
+    }
+    res.redirect('/')
+  })
 }
