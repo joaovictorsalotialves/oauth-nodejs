@@ -25,6 +25,22 @@ exports.signup = async (req, res, _next) => {
     res.redirect('/members')
   } catch (error) {
     console.log(error)
-    res.redirect('signup')
+    res.redirect('/signup')
+  }
+}
+
+exports.login = async (req, res, _next) => {
+  const { email, password } = req.body
+  const user = await User.findOne(email, password)
+
+  try {
+    if (user) {
+      return res.redirect('/members')
+    }
+
+    res.redirect('/')
+  } catch (error) {
+    console.log(error)
+    res.redirect('/')
   }
 }
