@@ -1,5 +1,5 @@
-const bcrypt = require('bcrypt')
 const User = require('../models/user')
+const bcrypt = require('bcrypt')
 
 exports.showIndex = (_req, res, _next) => {
   res.render('index')
