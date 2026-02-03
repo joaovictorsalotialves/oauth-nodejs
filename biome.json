@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["./controllers/**", "./routes/**", "./util/**", "./models/**", "./app.js"]
+    "includes": ["./controllers/**", "./routes/**", "./util/**", "./models/**", "./app.js", "./passport-config.js"]
   },
   "formatter": {
     "enabled": true,
